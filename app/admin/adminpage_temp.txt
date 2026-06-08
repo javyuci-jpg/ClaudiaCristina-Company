@@ -1,0 +1,49 @@
+import AdminClient from "./AdminClient";
+import { createServerClient } from "@supabase/ssr";
+import { cookies } from "next/headers";
+
+export default async function AdminPage({ user }: { user: any }) {
+  const cookieStore = cookies();
+
+  const supabase = createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      cookies: {
+        get(name: string) {
+          return cookieStore.get(name)?.value;
+        },
+        set(name: string, value: string, options: any) {
+          cookieStore.set({ name, value, ...options });
+        },
+        remove(name: string, options: any) {
+          cookieStore.set({ name, value: "", ...options, maxAge: 0 });
+        },
+      },
+    }
+  );
+
+  // Estadísticas reales
+  const { count: galleryCount } = await supabase
+    .from("gallery_images")
+    .select("*", { count: "exact", head: true });
+
+  const { count: reservasCount } = await supabase
+    .from("bookings")
+    .select("*", { count: "exact", head: true });
+
+  const { count: cotizacionesCount } = await supabase
+    .from("quotes")
+    .select("*", { count: "exact", head: true });
+
+  return (
+    <AdminClient
+      user={user}
+      stats={{
+        gallery: galleryCount ?? 0,
+        reservas: reservasCount ?? 0,
+        cotizaciones: cotizacionesCount ?? 0,
+      }}
+    />
+  );
+}
