@@ -13,6 +13,7 @@ import Lightbox from "../components/Lightbox";
 type GalleryImage = {
   src: string;
   category: string;
+   blurDataURL?: string 
 };
 
 type Props = {
