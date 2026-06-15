@@ -13,11 +13,11 @@ export default function Header() {
         {/* Logo */}
         <div className="flex items-center">
           <Link href="/home">
-            <img
-              src="/logo.png"
-              alt="Logo Claudia"
-              className="h-12 w-auto"
-            />
+        <img
+        src="/logo.png"
+        alt="Logo Claudia"
+        className="h-12 md:h-20 w-auto"
+/>
           </Link>
         </div>
 

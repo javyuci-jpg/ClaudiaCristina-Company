@@ -10,7 +10,7 @@ export default function Hero({
   title = "Arte en Movimiento",
   subtitle = "Danza · Performance · Expresión contemporánea",
   buttonText = "Ver portafolio",
-  backgroundImage = "/hero.jpg",
+  backgroundImage = "/hero.mp4",
   height = "90vh",
 }: HeroProps) {
   return (
