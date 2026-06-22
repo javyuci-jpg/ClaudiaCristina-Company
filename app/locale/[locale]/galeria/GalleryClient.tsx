@@ -4,12 +4,12 @@ import { useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-import HeroGallery from "../locale/components/HeroGallery";
-import Header from "../locale/components/Header";
-import CallToAction from "../locale/components/CallToAction";
-import Footer from "../locale/components/Footer";
-import FloatingChat from "../locale/components/FloatingChat";
-import Lightbox from "../locale/components/Lightbox";
+import HeroGallery from "../../../components/HeroGallery";
+import Header from "../../../components/Header";
+import CallToAction from "../../../components/CallToAction";
+import Footer from "../../../components/Footer";
+import FloatingChat from "../../../components/FloatingChat";
+import Lightbox from "../../../components/Lightbox";
 
 type GalleryImage = {
   src: string;
@@ -34,7 +34,7 @@ export default function GalleryClient({ images }: Props) {
 
   return (
     <main className="bg-[#F7F3EE] text-[#111111] font-[Inter]">
-      <Header />
+      
 
       <HeroGallery
         title={t("heroTitle")}
