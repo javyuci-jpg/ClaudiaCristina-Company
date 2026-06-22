@@ -1,0 +1,54 @@
+{
+  "heroTitle": "Demandez une expérience personnalisée",
+  "heroSubtitle": "Parlez-nous de votre événement et nous créerons une proposition adaptée à votre vision.",
+  "formTitle": "Parlez-nous de votre événement",
+  "fields": {
+    "nombre": "Nom complet *",
+    "correo": "Adresse e-mail *",
+    "telefono": "Téléphone / WhatsApp *",
+    "fecha": "Date de l'événement *",
+    "ubicacion": "Lieu de l'événement",
+    "tipoEvento": "Type d'événement",
+    "servicios": "Services d'intérêt",
+    "invitados": "Nombre estimé d'invités",
+    "conociste": "Comment nous avez-vous connus ?",
+    "descripcion": "Décrivez votre événement"
+  },
+  "errors": {
+    "nombre": "Le nom complet est obligatoire.",
+    "correo": "L'adresse e-mail est obligatoire.",
+    "telefono": "Le téléphone/WhatsApp est obligatoire.",
+    "fecha": "La date de l'événement est obligatoire."
+  },
+  "success": "✅ Votre demande a été envoyée avec succès. Nous vous contacterons bientôt.",
+  "button": "Créer mon expérience personnalisée",
+  "options": {
+    "tipoEvento": [
+      "Mariage",
+      "Événement d'entreprise",
+      "Célébration privée",
+      "Fête pour enfants",
+      "Activation de marque",
+      "Autre"
+    ],
+    "conociste": [
+      "Instagram",
+      "Facebook",
+      "Google",
+      "Référence",
+      "Wedding Planner",
+      "Client précédent",
+      "Lieu de l'événement",
+      "Autre"
+    ],
+    "servicios": [
+      "Divertissement",
+      "Animation",
+      "Présentation",
+      "Coaching de chorégraphie",
+      "Cours de danse",
+      "Cabine vidéo 360",
+      "Forfait personnalisé"
+    ]
+  }
+}

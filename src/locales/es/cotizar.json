@@ -1,0 +1,30 @@
+{
+  "heroTitle": "Solicita una Experiencia Personalizada",
+  "heroSubtitle": "Cuéntanos un poco sobre tu evento y crearemos una propuesta personalizada basada en tu visión.",
+  "formTitle": "Cuéntanos sobre tu evento",
+  "fields": {
+    "nombre": "Nombre completo *",
+    "correo": "Correo electrónico *",
+    "telefono": "Teléfono / WhatsApp *",
+    "fecha": "Fecha del evento *",
+    "ubicacion": "Ubicación del evento",
+    "tipoEvento": "Tipo de evento",
+    "servicios": "Servicios de interés",
+    "invitados": "Número estimado de invitados",
+    "conociste": "¿Cómo nos conociste?",
+    "descripcion": "Cuéntanos sobre tu evento"
+  },
+  "errors": {
+    "nombre": "El nombre completo es obligatorio.",
+    "correo": "El correo electrónico es obligatorio.",
+    "telefono": "El teléfono/WhatsApp es obligatorio.",
+    "fecha": "La fecha del evento es obligatoria."
+  },
+  "success": "✅ Tu solicitud fue enviada con éxito. Nos pondremos en contacto contigo pronto.",
+  "button": "Crear Mi Experiencia Personalizada",
+  "options": {
+    "tipoEvento": ["Boda","Evento Corporativo","Celebración Privada","Fiesta Infantil","Activación de Marca","Otro"],
+    "conociste": ["Instagram","Facebook","Google","Referencia","Wedding Planner","Cliente Anterior","Venue del Evento","Otro"],
+    "servicios": ["Entretenimiento","Hosting","Animación","Coaching de Coreografía","Clases de Baile","360 Video Booth","Paquete Personalizado"]
+  }
+}

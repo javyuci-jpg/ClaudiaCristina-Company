@@ -1,0 +1,70 @@
+{
+  "heroAlt": "Imagen principal de servicios",
+  "heroTitle": "Claudia Cristina",
+  "heroSubtitle": "Elegancia en cada movimiento.",
+  "sectionTitle": "Nuestros Servicios",
+  "prev": "Anterior",
+  "next": "Siguiente",
+
+  "items": [
+    { "icon": "💃", "title": "Entretenimiento", "description": "Bailarines profesionales interpretando espectáculos coreografiados en una variedad de estilos, adaptados a tu evento." },
+    { "icon": "🎤", "title": "Hosting", "description": "Hosting profesional y carismático que garantiza el flujo perfecto de tu evento." },
+    { "icon": "🎉", "title": "Animación", "description": "Experiencias interactivas diseñadas para involucrar y entretener a tus invitados." },
+    { "icon": "📝", "title": "Coaching de Coreografía", "description": "Coreografías personalizadas adaptadas a tu visión y ocasión especial." },
+    { "icon": "👯", "title": "Clases de Baile", "description": "Experiencias de baile inspiradoras para todas las edades y niveles." },
+    { "icon": "📸", "title": "360 Video Booth", "description": "Una forma moderna e inmersiva de capturar cada celebración." }
+  ],
+
+  "packagesTitle": "Paquetes",
+  "packages": [
+    {
+      "title": "Experiencia de Celebración para Bodas",
+      "description": "Combinación de servicios para una boda inolvidable.",
+      "includes": [
+        "Bailarina Cisne Blanco / Alas",
+        "Animación Hora Loca e Interacción con los Invitados",
+        "Experiencia 360 Video Booth",
+        "Coaching para la Coreografía del Primer Baile"
+      ],
+      "perfectFor": "Parejas que buscan entretenimiento elegante y memorable.",
+      "image": "/images/paquetes/bodas.jpg"
+    },
+    {
+      "title": "Experiencia Corporativa Prestige",
+      "description": "Paquete diseñado para eventos corporativos de alto nivel.",
+      "includes": [
+        "Woman Red Carpet",
+        "Show Profesional de Danza",
+        "Experiencia 360 Video Booth"
+      ],
+      "perfectFor": "Galas corporativas, premiaciones, lanzamientos de productos.",
+      "image": "/images/paquetes/corporativo.jpg"
+    },
+    {
+      "title": "Experiencia Little Stars Party",
+      "description": "Diversión para los más pequeños con danza y creatividad.",
+      "includes": [
+        "Show Interactivo de Danza",
+        "Mini Clase de Baile y Coreografía Divertida",
+        "Hosting",
+        "Experiencia de Glitter Art"
+      ],
+      "perfectFor": "Cumpleaños, celebraciones escolares y eventos familiares.",
+      "image": "/images/paquetes/infantil.jpg"
+    },
+    {
+      "title": "Crea Tu Experiencia Personalizada",
+      "description": "Elige y combina los servicios que desees.",
+      "includes": [
+        "Servicios a medida según tus necesidades"
+      ],
+      "perfectFor": "Clientes que buscan flexibilidad y personalización.",
+      "image": "/images/paquetes/personalizado.jpg"
+    }
+  ]
+}
+
+
+
+  
+

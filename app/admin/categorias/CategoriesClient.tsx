@@ -5,7 +5,6 @@ import type { Category } from "./types";
 import CategoryForm from "./CategoryForm";
 import toast from "react-hot-toast";
 
-// Server Actions
 import {
   createCategory,
   updateCategory,
@@ -21,19 +20,15 @@ export default function CategoriesClient({ initialCategories }: Props) {
   const [editing, setEditing] = useState<Category | null>(null);
   const [creating, setCreating] = useState(false);
 
-  // -----------------------------
-  // ELIMINAR
-  // -----------------------------
-  async function handleDelete(id: number) {
+  async function handleDelete(id: string) {
+    if (!window.confirm("¿Seguro que deseas eliminar esta categoría?")) return;
+
     try {
       await deleteCategory(id);
-
-      // Actualizar UI local
       setItems(items.filter((c) => c.id !== id));
-
       toast.success("Categoría eliminada");
-    } catch (err) {
-      toast.error("Error eliminando categoría");
+    } catch (err: any) {
+      toast.error(`Error eliminando categoría: ${err.message}`);
     }
   }
 
@@ -96,14 +91,11 @@ export default function CategoriesClient({ initialCategories }: Props) {
           onSave={async (name, icon) => {
             try {
               const data = await createCategory(name, icon);
-
-              // Actualizar UI local
               setItems([...items, data]);
-
               toast.success("Categoría creada");
               setCreating(false);
-            } catch (err) {
-              toast.error("Error creando categoría");
+            } catch (err: any) {
+              toast.error(`Error creando categoría: ${err.message}`);
             }
           }}
         />
@@ -116,9 +108,8 @@ export default function CategoriesClient({ initialCategories }: Props) {
           onClose={() => setEditing(null)}
           onSave={async (name, icon) => {
             try {
-              await updateCategory(editing.id, name, icon);
+              const updated = await updateCategory(editing.id, name, icon);
 
-              // Actualizar UI local
               setItems(
                 items.map((c) =>
                   c.id === editing.id ? { ...c, name, icon } : c
@@ -127,8 +118,8 @@ export default function CategoriesClient({ initialCategories }: Props) {
 
               toast.success("Categoría actualizada");
               setEditing(null);
-            } catch (err) {
-              toast.error("Error actualizando categoría");
+            } catch (err: any) {
+              toast.error(`Error actualizando categoría: ${err.message}`);
             }
           }}
         />

@@ -2,14 +2,14 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import SectionTitle from "../components/SectionTitle";
+import SectionTitle from "../../../components/SectionTitle";
 
 // Componentes globales
-import HeroGallery from "../components/HeroGallery";
-import Header from "../components/Header";
-import CallToAction from "../components/CallToAction";
-import Footer from "../components/Footer";
-import FloatingChat from "../components/FloatingChat";
+import HeroGallery from "../../../components/HeroGallery";
+import Header from "../../../components/Header";
+import CallToAction from "../../../components/CallToAction";
+import Footer from "../../../components/Footer";
+import FloatingChat from "../../../components/FloatingChat";
 
 
 export default function colaboraciones() {
@@ -20,7 +20,7 @@ export default function colaboraciones() {
        return (
           <main className="bg-[#F7F3EE] text-[#111111] font-[Inter]">
             {/* HEADER */}
-            <Header />
+         
       
             {/* HERO */}
             <HeroGallery

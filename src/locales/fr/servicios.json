@@ -1,0 +1,89 @@
+{
+  "heroAlt": "Image principale des services",
+  "heroTitle": "Claudia Cristina",
+  "heroSubtitle": "Élégance dans chaque mouvement.",
+  "sectionTitle": "Nos Services",
+  "prev": "Précédent",
+  "next": "Suivant",
+
+  "items": [
+    {
+      "icon": "💃",
+      "title": "Divertissement",
+      "description": "Danseurs professionnels interprétant des spectacles chorégraphiés dans une variété de styles, adaptés à votre événement."
+    },
+    {
+      "icon": "🎤",
+      "title": "Animation de l'événement",
+      "description": "Animation professionnelle et charismatique qui garantit le déroulement parfait de votre événement."
+    },
+    {
+      "icon": "🎉",
+      "title": "Animation",
+      "description": "Expériences interactives conçues pour impliquer et divertir vos invités."
+    },
+    {
+      "icon": "📝",
+      "title": "Coaching de Chorégraphie",
+      "description": "Chorégraphies personnalisées adaptées à votre vision et à votre occasion spéciale."
+    },
+    {
+      "icon": "👯",
+      "title": "Cours de Danse",
+      "description": "Expériences de danse inspirantes pour tous les âges et niveaux."
+    },
+    {
+      "icon": "📸",
+      "title": "Cabine Vidéo 360",
+      "description": "Une manière moderne et immersive de capturer chaque célébration."
+    }
+  ],
+
+  "packagesTitle": "Forfaits",
+  "packages": [
+    {
+      "title": "Expérience de Célébration de Mariage",
+      "description": "Une combinaison de services pour un mariage inoubliable.",
+      "includes": [
+        "Danseuse Cygne Blanc / Ailes",
+        "Animation Heure Folle et Interaction avec les Invités",
+        "Expérience Cabine Vidéo 360",
+        "Coaching pour la Chorégraphie de la Première Danse"
+      ],
+      "perfectFor": "Couples recherchant un divertissement élégant et des expériences mémorables.",
+      "image": "/images/paquetes/bodas.jpg"
+    },
+    {
+      "title": "Expérience Prestige Corporative",
+      "description": "Forfait conçu pour des événements corporatifs de haut niveau.",
+      "includes": [
+        "Woman Red Carpet",
+        "Spectacle de Danse Professionnel",
+        "Expérience Cabine Vidéo 360"
+      ],
+      "perfectFor": "Galas corporatifs, cérémonies de remise de prix, lancements de produits.",
+      "image": "/images/paquetes/corporativo.jpg"
+    },
+    {
+      "title": "Expérience Little Stars Party",
+      "description": "Amusement pour les enfants avec danse et créativité.",
+      "includes": [
+        "Spectacle de Danse Interactif",
+        "Mini Cours de Danse et Chorégraphie Amusante",
+        "Animation",
+        "Expérience Glitter Art"
+      ],
+      "perfectFor": "Anniversaires, célébrations scolaires et événements familiaux.",
+      "image": "/images/paquetes/infantil.jpg"
+    },
+    {
+      "title": "Créez Votre Expérience Personnalisée",
+      "description": "Choisissez et combinez les services que vous souhaitez.",
+      "includes": [
+        "Services sur mesure selon vos besoins"
+      ],
+      "perfectFor": "Clients recherchant flexibilité et personnalisation.",
+      "image": "/images/paquetes/personalizado.jpg"
+    }
+  ]
+}

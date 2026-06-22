@@ -1,0 +1,65 @@
+{
+  "heroAlt": "Main services image",
+  "heroTitle": "Claudia Cristina",
+  "heroSubtitle": "Elegance in every movement.",
+  "sectionTitle": "Our Services",
+  "prev": "Previous",
+  "next": "Next",
+
+  "items": [
+    { "icon": "💃", "title": "Entertainment", "description": "Professional dancers performing choreographed shows in a variety of styles, tailored to your event." },
+    { "icon": "🎤", "title": "Hosting", "description": "Charismatic professional hosting that ensures the perfect flow of your event." },
+    { "icon": "🎉", "title": "Animation", "description": "Interactive experiences designed to engage and entertain your guests." },
+    { "icon": "📝", "title": "Choreography Coaching", "description": "Personalized choreographies adapted to your vision and special occasion." },
+    { "icon": "👯", "title": "Dance Classes", "description": "Inspiring dance experiences for all ages and levels." },
+    { "icon": "📸", "title": "360 Video Booth", "description": "A modern and immersive way to capture every celebration." }
+  ],
+
+  "packagesTitle": "Packages",
+  "packages": [
+    {
+      "title": "Wedding Celebration Experience",
+      "description": "A combination of services for an unforgettable wedding.",
+      "includes": [
+        "Swan White Dancer / Wings",
+        "Crazy Hour Animation and Guest Interaction",
+        "360 Video Booth Experience",
+        "First Dance Choreography Coaching"
+      ],
+      "perfectFor": "Couples seeking elegant entertainment and memorable experiences.",
+      "image": "/images/paquetes/bodas.jpg"
+    },
+    {
+      "title": "Corporate Prestige Experience",
+      "description": "Package designed for high-level corporate events.",
+      "includes": [
+        "Woman Red Carpet",
+        "Professional Dance Show",
+        "360 Video Booth Experience"
+      ],
+      "perfectFor": "Corporate galas, award ceremonies, product launches.",
+      "image": "/images/paquetes/corporativo.jpg"
+    },
+    {
+      "title": "Little Stars Party Experience",
+      "description": "Fun for kids with dance and creativity.",
+      "includes": [
+        "Interactive Dance Show",
+        "Mini Dance Class and Fun Choreography",
+        "Hosting",
+        "Glitter Art Experience"
+      ],
+      "perfectFor": "Birthdays, school celebrations, family events.",
+      "image": "/images/paquetes/infantil.jpg"
+    },
+    {
+      "title": "Create Your Personalized Experience",
+      "description": "Choose and combine the services you want.",
+      "includes": [
+        "Tailored services according to your needs"
+      ],
+      "perfectFor": "Clients seeking flexibility and customization.",
+      "image": "/images/paquetes/personalizado.jpg"
+    }
+  ]
+}

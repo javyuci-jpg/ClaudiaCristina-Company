@@ -2,17 +2,17 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import SectionTitle from "../components/SectionTitle";
+import SectionTitle from "../../../components/SectionTitle";
 
 // Componentes globales
-import HeroGallery from "../components/HeroGallery";
-import Header from "../components/Header";
-import CallToAction from "../components/CallToAction";
-import Footer from "../components/Footer";
-import FloatingChat from "../components/FloatingChat";
+import HeroGallery from "../../../components/HeroGallery";
+import Header from "../../../components/Header";
+import CallToAction from "../../../components/CallToAction";
+import Footer from "../../../components/Footer";
+import FloatingChat from "../../../components/FloatingChat";
 
 
-export default function biografia() {
+export default function contacto() {
   const [selected, setSelected] = useState<string | null>(null);
         const [filter, setFilter] = useState<string>("Todos");
         const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -20,7 +20,7 @@ export default function biografia() {
          return (
             <main className="bg-[#F7F3EE] text-[#111111] font-[Inter]">
               {/* HEADER */}
-              <Header />
+              
         
               {/* HERO */}
               <HeroGallery
@@ -34,7 +34,7 @@ export default function biografia() {
                 
                 {/* Título */}
                 <h2 className="text-4xl md:text-5xl font-[Playfair_Display] font-bold text-[#111111] mb-8 text-center">
-                  <SectionTitle>Biografía</SectionTitle> 
+                  <SectionTitle>Contactos</SectionTitle> 
                   
                 </h2>
         

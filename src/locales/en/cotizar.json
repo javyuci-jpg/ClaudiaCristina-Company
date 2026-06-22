@@ -1,0 +1,30 @@
+{
+  "heroTitle": "Request a Personalized Experience",
+  "heroSubtitle": "Tell us about your event and we will create a proposal based on your vision.",
+  "formTitle": "Tell us about your event",
+  "fields": {
+    "nombre": "Full Name *",
+    "correo": "Email *",
+    "telefono": "Phone / WhatsApp *",
+    "fecha": "Event Date *",
+    "ubicacion": "Event Location",
+    "tipoEvento": "Type of Event",
+    "servicios": "Services of Interest",
+    "invitados": "Estimated Number of Guests",
+    "conociste": "How did you find us?",
+    "descripcion": "Tell us about your event"
+  },
+  "errors": {
+    "nombre": "Full name is required.",
+    "correo": "Email is required.",
+    "telefono": "Phone/WhatsApp is required.",
+    "fecha": "Event date is required."
+  },
+  "success": "✅ Your request was sent successfully. We will contact you soon.",
+  "button": "Create My Personalized Experience",
+  "options": {
+    "tipoEvento": ["Wedding","Corporate Event","Private Celebration","Kids Party","Brand Activation","Other"],
+    "conociste": ["Instagram","Facebook","Google","Referral","Wedding Planner","Previous Client","Event Venue","Other"],
+    "servicios": ["Entertainment","Hosting","Animation","Choreography Coaching","Dance Classes","360 Video Booth","Custom Package"]
+  }
+}

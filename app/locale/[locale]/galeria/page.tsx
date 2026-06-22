@@ -1,15 +1,14 @@
 import GalleryClient from "./GalleryClient";
 import { createClient } from "@supabase/supabase-js";
+import { useTranslations } from "next-intl";
 
 export const revalidate = 60;
 
-// 🔥 Crear cliente Supabase en este archivo
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 );
 
-// 🔥 Obtener imágenes desde Supabase
 async function fetchImages() {
   const { data, error } = await supabase.from("gallery").select("*");
 
@@ -23,5 +22,16 @@ async function fetchImages() {
 
 export default async function GaleriaPage() {
   const images = await fetchImages();
-  return <GalleryClient images={images} />;
+
+  // Hook de traducción
+  const t = useTranslations("common");
+
+  return (
+    <div>
+      <h1 className="text-2xl font-bold mb-4">{t("gallery")}</h1>
+      <p className="mb-6">{t("galleryDescription")}</p>
+
+      <GalleryClient images={images} />
+    </div>
+  );
 }

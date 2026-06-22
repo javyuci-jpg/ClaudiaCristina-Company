@@ -2,18 +2,19 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
-import HeroGallery from "../components/HeroGallery";
-import Header from "../components/Header";
-import CallToAction from "../components/CallToAction";
-import Footer from "../components/Footer";
-import FloatingChat from "../components/FloatingChat";
-import Lightbox from "../components/Lightbox";
+import HeroGallery from "../locale/components/HeroGallery";
+import Header from "../locale/components/Header";
+import CallToAction from "../locale/components/CallToAction";
+import Footer from "../locale/components/Footer";
+import FloatingChat from "../locale/components/FloatingChat";
+import Lightbox from "../locale/components/Lightbox";
 
 type GalleryImage = {
   src: string;
   category: string;
-   blurDataURL?: string 
+  blurDataURL?: string;
 };
 
 type Props = {
@@ -21,12 +22,14 @@ type Props = {
 };
 
 export default function GalleryClient({ images }: Props) {
+  const t = useTranslations("common"); // Hook de traducción
+
   const [selected, setSelected] = useState<string | null>(null);
-  const [filter, setFilter] = useState<string>("Todos");
+  const [filter, setFilter] = useState<string>("all");
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   const filteredImages = images.filter(
-    (img) => filter === "Todos" || img.category === filter
+    (img) => filter === "all" || img.category === filter
   );
 
   return (
@@ -34,8 +37,8 @@ export default function GalleryClient({ images }: Props) {
       <Header />
 
       <HeroGallery
-        title="Claudia Cristina"
-        subtitle="Elegancia en cada movimiento."
+        title={t("heroTitle")}
+        subtitle={t("heroSubtitle")}
         backgroundImage="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e"
         height="55vh"
       />
@@ -43,24 +46,22 @@ export default function GalleryClient({ images }: Props) {
       <section className="w-full py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-wrap gap-4 justify-center mb-12">
-            {["Todos", "Bodas", "Eventos", "Bouquets", "Arte Floral"].map(
-              (cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setFilter(cat)}
-                  className={`
-                    px-6 py-2 rounded-full border text-sm font-medium transition
-                    ${
-                      filter === cat
-                        ? "bg-[#A4161A] text-white border-[#A4161A]"
-                        : "bg-white text-[#111111] border-[#E8E1D9] hover:bg-[#f3ebe4]"
-                    }
-                  `}
-                >
-                  {cat}
-                </button>
-              )
-            )}
+            {["all", "weddings", "events", "bouquets", "floralArt"].map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setFilter(cat)}
+                className={`
+                  px-6 py-2 rounded-full border text-sm font-medium transition
+                  ${
+                    filter === cat
+                      ? "bg-[#A4161A] text-white border-[#A4161A]"
+                      : "bg-white text-[#111111] border-[#E8E1D9] hover:bg-[#f3ebe4]"
+                  }
+                `}
+              >
+                {t(cat)} {/* Traducción dinámica */}
+              </button>
+            ))}
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 transition-all">
@@ -75,7 +76,7 @@ export default function GalleryClient({ images }: Props) {
               >
                 <Image
                   src={img.src}
-                  alt="Foto"
+                  alt={t("photoAlt")}
                   width={600}
                   height={400}
                   placeholder="blur"
@@ -83,7 +84,6 @@ export default function GalleryClient({ images }: Props) {
                   loading="lazy"
                   className="object-cover h-72 w-full group-hover:scale-105 transition-transform duration-500"
                 />
-
               </div>
             ))}
           </div>
