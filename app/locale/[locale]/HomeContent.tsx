@@ -33,7 +33,7 @@ export default function HomeContent({ locale }: { locale: string }) {
         <h2 id="servicios" className="sr-only">
           {t("servicesSectionTitle")}
         </h2>
-        <Services />
+       
       </section>
 
       {/* GALLERY PREVIEW */}
