@@ -1,0 +1,28 @@
+{
+  "heroTitle": "Questions Fréquemment Posées",
+  "heroSubtitle": "Nous répondons à vos questions les plus courantes",
+  "heroAlt": "Image de fond pour Questions Fréquemment Posées",
+  "title": "Questions Fréquemment Posées",
+  "questions": [
+    {
+      "question": "Les services peuvent-ils être personnalisés?",
+      "answer": "Oui. Chaque événement est unique et tous nos services peuvent être adaptés à votre vision, thème et expérience souhaitée."
+    },
+    {
+      "question": "Puis-je combiner plusieurs services?",
+      "answer": "Bien sûr. Nous vous invitons à explorer notre section Forfaits pour découvrir des exemples de combinaisons de services créant une expérience personnalisée."
+    },
+    {
+      "question": "Quels types de spectacles de danse proposez-vous?",
+      "answer": "Nous proposons une variété de styles, y compris ballet, contemporain, salsa, tango, spectacles thématiques et chorégraphies personnalisées pour votre événement."
+    },
+    {
+      "question": "Vous déplacez-vous en dehors de Montréal?",
+      "answer": "Oui. Nous sommes disponibles pour des événements partout au Québec, en Ontario et dans d'autres destinations sur demande."
+    },
+    {
+      "question": "Comment puis-je demander un devis?",
+      "answer": "Il suffit de remplir notre formulaire de contact ou de nous écrire directement via WhatsApp. Nous serons ravis de discuter de votre événement et de préparer une proposition personnalisée."
+    }
+  ]
+}

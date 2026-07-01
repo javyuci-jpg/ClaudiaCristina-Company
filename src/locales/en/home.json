@@ -1,10 +1,16 @@
 {
+  "hero": {
+    "title": "Art in Motion",
+    "subtitle": "Dance · Performance · Contemporary Expression",
+    "button": "View portfolio"
+  },
+
   "heroSectionLabel": "Main welcome section",
   "aboutSectionTitle": "About us",
   "servicesSectionTitle": "Our services",
   "gallerySectionTitle": "Work gallery",
   "galleryLinkLabel": "View full gallery",
   "galleryLinkText": "Explore gallery",
-  "testimonialsSectionTitle": "Customer testimonials",
+  "testimonialsSectionTitle": "Client testimonials",
   "ctaSectionTitle": "Book your appointment"
 }

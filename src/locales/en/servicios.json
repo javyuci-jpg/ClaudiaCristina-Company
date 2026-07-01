@@ -7,13 +7,39 @@
   "next": "Next",
 
   "items": [
-    { "icon": "💃", "title": "Entertainment", "description": "Professional dancers performing choreographed shows in a variety of styles, tailored to your event." },
-    { "icon": "🎤", "title": "Hosting", "description": "Charismatic professional hosting that ensures the perfect flow of your event." },
-    { "icon": "🎉", "title": "Animation", "description": "Interactive experiences designed to engage and entertain your guests." },
-    { "icon": "📝", "title": "Choreography Coaching", "description": "Personalized choreographies adapted to your vision and special occasion." },
-    { "icon": "👯", "title": "Dance Classes", "description": "Inspiring dance experiences for all ages and levels." },
-    { "icon": "📸", "title": "360 Video Booth", "description": "A modern and immersive way to capture every celebration." }
+    {
+      "image": "/imagenes/servicios/entertainment.jpg",
+      "title": "Entertainment",
+      "description": "Professional dancers performing choreographed shows in a variety of styles, tailored to your event."
+    },
+    {
+      "image": "/imagenes/servicios/hosting.jpg",
+      "title": "Hosting",
+      "description": "Professional and charismatic hosting that ensures the perfect flow of your event."
+    },
+    {
+      "image": "/imagenes/servicios/animacion.png",
+      "title": "Animation",
+      "description": "Interactive experiences designed to engage and entertain your guests."
+    },
+    {
+      "image": "/imagenes/servicios/choreography-coaching.jpg",
+      "title": "Choreography Coaching",
+      "description": "Personalized choreographies adapted to your vision and special occasion."
+    },
+    {
+      "image": "/imagenes/servicios/dance-classes.png",
+      "title": "Dance Classes",
+      "description": "Inspiring dance experiences for all ages and levels."
+    },
+    {
+      "image": "/imagenes/servicios/360.png",
+      "title": "360 Video Booth",
+      "description": "A modern and immersive way to capture every celebration."
+    }
   ],
+
+  "packagesButton": "Our Packages",
 
   "packagesTitle": "Packages",
   "packages": [
@@ -21,12 +47,12 @@
       "title": "Wedding Celebration Experience",
       "description": "A combination of services for an unforgettable wedding.",
       "includes": [
-        "Swan White Dancer / Wings",
+        "White Swan / Wings Dancer",
         "Crazy Hour Animation and Guest Interaction",
         "360 Video Booth Experience",
-        "First Dance Choreography Coaching"
+        "Coaching for the First Dance Choreography"
       ],
-      "perfectFor": "Couples seeking elegant entertainment and memorable experiences.",
+      "perfectFor": "Couples seeking elegant and memorable entertainment.",
       "image": "/images/paquetes/bodas.jpg"
     },
     {
@@ -42,14 +68,14 @@
     },
     {
       "title": "Little Stars Party Experience",
-      "description": "Fun for kids with dance and creativity.",
+      "description": "Fun for the little ones with dance and creativity.",
       "includes": [
         "Interactive Dance Show",
         "Mini Dance Class and Fun Choreography",
         "Hosting",
         "Glitter Art Experience"
       ],
-      "perfectFor": "Birthdays, school celebrations, family events.",
+      "perfectFor": "Birthdays, school celebrations, and family events.",
       "image": "/images/paquetes/infantil.jpg"
     },
     {
@@ -58,7 +84,7 @@
       "includes": [
         "Tailored services according to your needs"
       ],
-      "perfectFor": "Clients seeking flexibility and customization.",
+      "perfectFor": "Clients seeking flexibility and personalization.",
       "image": "/images/paquetes/personalizado.jpg"
     }
   ]

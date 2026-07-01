@@ -1,28 +1,20 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  // Internacionalización
-  i18n: {
-    locales: ["en", "fr", "es"], // idiomas soportados
-    defaultLocale: "en",         // idioma principal
-  },
 
-  // Configuración de imágenes remotas
+import withNextIntl from "next-intl/plugin";
+
+const nextConfig = {
+  i18n: {
+    locales: ["en", "fr", "es"],
+    defaultLocale: "en"
+  },
   images: {
     remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com", // pruebas
-      },
-      {
-        protocol: "https",
-        hostname: "*.supabase.co",       // imágenes reales de Claudia
-      },
-    ],
+      { protocol: "https", hostname: "images.unsplash.com" },
+      { protocol: "https", hostname: "*.supabase.co" }
+    ]
   },
-
-  // Buenas prácticas recomendadas
   reactStrictMode: true,
-  swcMinify: true,
+  swcMinify: true
 };
 
-module.exports = nextConfig;
+export default withNextIntl("./next-intl.config.js")(nextConfig);

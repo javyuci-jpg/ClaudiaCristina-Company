@@ -45,8 +45,7 @@ export default function eventos() {
           {/* CTA */}
           <CallToAction />
     
-          {/* FOOTER */}
-          <Footer />
+       
     
           {/* CHAT */}
           <FloatingChat />

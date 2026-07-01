@@ -44,9 +44,7 @@ export default function contacto() {
         
               {/* CTA */}
               <CallToAction />
-        
-              {/* FOOTER */}
-              <Footer />
+
         
               {/* CHAT */}
               <FloatingChat />

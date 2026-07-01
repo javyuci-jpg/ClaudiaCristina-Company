@@ -28,16 +28,37 @@ import enCotizar from "../src/locales/en/cotizar.json";
 import esCotizar from "../src/locales/es/cotizar.json";
 import frCotizar from "../src/locales/fr/cotizar.json";
 
+import enHero from "../src/locales/en/hero.json";
+import esHero from "../src/locales/es/hero.json";
+import frHero from "../src/locales/fr/hero.json";
+
+import enFooter from "../src/locales/en/footer.json";
+import esFooter from "../src/locales/es/footer.json";
+import frFooter from "../src/locales/fr/footer.json";
+
+import enCallToAction from "../src/locales/en/CallToAction.json";
+import esCallToAction from "../src/locales/es/CallToAction.json";
+import frCallToAction from "../src/locales/fr/CallToAction.json";
+
+import enAbout from "../src/locales/en/About.json";
+import esAbout from "../src/locales/es/About.json";
+import frAbout from "../src/locales/fr/About.json";
+
+import enFaq from "../src/locales/en/faq.json";
+import esFaq from "../src/locales/es/faq.json";
+import frFaq from "../src/locales/fr/faq.json";
+
+
 i18n.use(initReactI18next).init({
   fallbackLng: "en",
   supportedLngs: ["en", "es", "fr"],
   defaultNS: "common",
-  ns: ["common", "home", "biografia", "servicios", "header","cotizar"],
+  ns: ["common", "home", "biografia", "servicios", "header","cotizar", "hero", "footer", "callToAction",  "about", "faq"],
   interpolation: { escapeValue: false },
   resources: {
-    en: { common: enCommon, home: enHome, biografia: enBiografia, servicios: enServicios, header: enHeader, cotizar: enCotizar},
-    es: { common: esCommon, home: esHome, biografia: esBiografia, servicios: esServicios, header: esHeader, cotizar: esCotizar},
-    fr: { common: frCommon, home: frHome, biografia: frBiografia, servicios: frServicios, header: frHeader, cotizar: frCotizar},
+    en: { common: enCommon, home: enHome, biografia: enBiografia, servicios: enServicios, header: enHeader, cotizar: enCotizar, hero: enHero, footer: enFooter, callToAction: enCallToAction, about: enAbout, faq: enFaq},
+    es: { common: esCommon, home: esHome, biografia: esBiografia, servicios: esServicios, header: esHeader, cotizar: esCotizar, hero: esHero, footer: esFooter, callToAction: esCallToAction, about: esAbout, faq: esFaq},
+    fr: { common: frCommon, home: frHome, biografia: frBiografia, servicios: frServicios, header: frHeader, cotizar: frCotizar, hero: frHero, footer: frFooter, callToAction: frCallToAction, about:frAbout, faq: frFaq},
   },
 });
 

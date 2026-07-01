@@ -1,17 +1,40 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslation } from "react-i18next";
 
 export default function Header({ locale }: { locale: string }) {
   const [open, setOpen] = useState(false);
-  const pathname = usePathname(); // ej: /locale/es/biografia
+  const [langOpen, setLangOpen] = useState(false);
+  const pathname = usePathname();
   const segments = pathname.split("/");
-  const restOfPath = "/" + segments.slice(3).join("/"); // /biografia, /servicios, etc.
+  const restOfPath = "/" + segments.slice(3).join("/");
 
   const { t } = useTranslation("header");
+
+  // Idiomas disponibles
+  const languages = [
+    { code: "es", label: "ES" },
+    { code: "en", label: "EN" },
+    { code: "fr", label: "FR" },
+  ];
+
+  const currentLang = languages.find(l => l.code === locale);
+
+  // Ref para detectar clic fuera
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setLangOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <header className="w-full bg-[#F7F3EE] border-b border-[#E8E1D9] sticky top-0 shadow-[0_2px_8px_rgba(0,0,0,0.08)] z-[999]">
@@ -37,13 +60,35 @@ export default function Header({ locale }: { locale: string }) {
           <Link href={`/locale/${locale}/eventos`} className="hover:text-[#A4161A] transition">{t("navEventos")}</Link>
           <Link href={`/locale/${locale}/colaboraciones`} className="hover:text-[#A4161A] transition">{t("navColaboraciones")}</Link>
           <Link href={`/locale/${locale}/contacto`} className="hover:text-[#A4161A] transition">{t("navContacto")}</Link>
+          <Link href={`/locale/${locale}/faq`} className="hover:text-[#A4161A] transition">{t("navFaq")}</Link>
         </nav>
 
-        {/* Idiomas dinámicos */}
-        <div className="hidden md:flex gap-3 text-sm font-semibold font-montserrat text-[#111111]">
-          <Link href={`/locale/es${restOfPath}`} className={locale === "es" ? "font-bold underline" : ""}>ES</Link>
-          <Link href={`/locale/en${restOfPath}`} className={locale === "en" ? "font-bold underline" : ""}>EN</Link>
-          <Link href={`/locale/fr${restOfPath}`} className={locale === "fr" ? "font-bold underline" : ""}>FR</Link>
+        {/* Idiomas dinámicos con dropdown */}
+        <div ref={dropdownRef} className="hidden md:flex relative text-sm font-semibold font-montserrat text-[#111111]">
+          <button
+            onClick={() => setLangOpen(!langOpen)}
+            className="flex items-center gap-2 cursor-pointer"
+          >
+            <span className="font-bold underline">{currentLang?.label}</span>
+            <span className="text-xs">▼</span>
+          </button>
+
+          {langOpen && (
+            <div
+              className="absolute right-0 mt-2 bg-[#F7F3EE] border border-[#E8E1D9] rounded shadow-md flex flex-col animate-slideDown"
+            >
+              {languages.filter(l => l.code !== locale).map(l => (
+                <Link
+                  key={l.code}
+                  href={`/locale/${l.code}${restOfPath}`}
+                  className="px-4 py-2 hover:bg-[#E8E1D9] cursor-pointer"
+                  onClick={() => setLangOpen(false)}
+                >
+                  {l.label}
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Mobile Button */}
@@ -65,11 +110,34 @@ export default function Header({ locale }: { locale: string }) {
           <Link href={`/locale/${locale}/eventos`} onClick={() => setOpen(false)}>{t("navEventos")}</Link>
           <Link href={`/locale/${locale}/colaboraciones`} onClick={() => setOpen(false)}>{t("navColaboraciones")}</Link>
           <Link href={`/locale/${locale}/contacto`} onClick={() => setOpen(false)}>{t("navContacto")}</Link>
+          <Link href={`/locale/${locale}/faq`} onClick={() => setOpen(false)}>{t("navFaq")}</Link>
 
-          <div className="flex gap-4 pt-2">
-            <Link href={`/locale/es${restOfPath}`} onClick={() => setOpen(false)}>ES</Link>
-            <Link href={`/locale/en${restOfPath}`} onClick={() => setOpen(false)}>EN</Link>
-            <Link href={`/locale/fr${restOfPath}`} onClick={() => setOpen(false)}>FR</Link>
+          {/* Idiomas en mobile */}
+          <div className="flex flex-col gap-2 pt-2">
+            <button
+              onClick={() => setLangOpen(!langOpen)}
+              className="flex items-center gap-2 cursor-pointer"
+            >
+              <span className="font-bold underline">{currentLang?.label}</span>
+              <span className="text-xs">▼</span>
+            </button>
+            {langOpen && (
+              <div className="flex flex-col bg-[#F7F3EE] border border-[#E8E1D9] rounded shadow-md animate-slideDown">
+                {languages.filter(l => l.code !== locale).map(l => (
+                  <Link
+                    key={l.code}
+                    href={`/locale/${l.code}${restOfPath}`}
+                    className="px-4 py-2 hover:bg-[#E8E1D9] cursor-pointer"
+                    onClick={() => {
+                      setLangOpen(false);
+                      setOpen(false);
+                    }}
+                  >
+                    {l.label}
+                  </Link>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       )}

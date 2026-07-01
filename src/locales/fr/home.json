@@ -1,10 +1,16 @@
 {
-  "heroSectionLabel": "Section principale de bienvenue",
+  "hero": {
+    "title": "Art en Mouvement",
+    "subtitle": "Danse · Performance · Expression contemporaine",
+    "button": "Voir le portfolio"
+  },
+
+  "heroSectionLabel": "Section principale d'accueil",
   "aboutSectionTitle": "À propos de nous",
   "servicesSectionTitle": "Nos services",
   "gallerySectionTitle": "Galerie de travaux",
   "galleryLinkLabel": "Voir la galerie complète",
   "galleryLinkText": "Explorer la galerie",
   "testimonialsSectionTitle": "Témoignages de clients",
-  "ctaSectionTitle": "Réservez votre rendez-vous"
+  "ctaSectionTitle": "Prendre rendez-vous"
 }

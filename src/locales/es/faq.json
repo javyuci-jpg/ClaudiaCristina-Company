@@ -1,0 +1,28 @@
+{
+  "heroTitle": "Preguntas Frecuentes",
+  "heroSubtitle": "Resolvemos tus dudas más comunes",
+  "heroAlt": "Imagen de fondo para Preguntas Frecuentes",
+  "title": "Preguntas Frecuentes",
+  "questions": [
+    {
+      "question": "¿Se pueden personalizar los servicios?",
+      "answer": "Sí. Cada evento es único y todos nuestros servicios pueden adaptarse a tu visión, temática y experiencia deseada."
+    },
+    {
+      "question": "¿Puedo combinar varios servicios?",
+      "answer": "Por supuesto. Te invitamos a explorar nuestra sección de Paquetes para descubrir ejemplos de cómo diferentes servicios pueden combinarse para crear una experiencia personalizada."
+    },
+    {
+      "question": "¿Qué tipos de espectáculos de danza ofrecen?",
+      "answer": "Ofrecemos una variedad de estilos, incluyendo ballet, contemporáneo, salsa, tango, espectáculos temáticos y coreografías personalizadas para tu evento."
+    },
+    {
+      "question": "¿Se desplazan fuera de Montreal?",
+      "answer": "Sí. Estamos disponibles para eventos en todo Quebec, Ontario y otros destinos bajo solicitud."
+    },
+    {
+      "question": "¿Cómo puedo solicitar una cotización?",
+      "answer": "Simplemente completa nuestro formulario de contacto o escríbenos directamente por WhatsApp. Estaremos encantados de conversar sobre tu evento y preparar una propuesta personalizada."
+    }
+  ]
+}

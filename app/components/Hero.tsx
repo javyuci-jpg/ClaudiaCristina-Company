@@ -1,30 +1,26 @@
+"use client";
+
+import { useTranslation } from "react-i18next";
+import Link from "next/link";
+
 interface HeroProps {
-  title?: string;
-  subtitle?: string;
-  buttonText?: string;
-  videoSrc?: string;        // ← NUEVO: ruta del video
-  posterImage?: string;     // ← NUEVO: imagen fallback
+  videoSrc?: string;
+  posterImage?: string;
   height?: string;
+  locale: string; // 👈 añadimos locale como prop
 }
 
 export default function Hero({
-  title = "Arte en Movimiento",
-  subtitle = "Danza · Performance · Expresión contemporánea",
-  buttonText = "Ver portafolio",
-
-  // 👉 Aquí defines la ruta del video
-  // LOCAL: /videos/hero.mp4
-  // EXTERNO: https://res.cloudinary.com/.../video.mp4
   videoSrc = "/videos/hero.mp4",
-
-  // 👉 Imagen fallback mientras carga el video
   posterImage = "/images/hero-fallback.jpg",
-
   height = "90vh",
+  locale,
 }: HeroProps) {
+  const { t } = useTranslation("hero");
+
   return (
     <section
-      className="relative w-full flex items-center justify-center overflow-hidden"
+      className="relative w-full flex items-end justify-center overflow-hidden"
       style={{ height }}
     >
       {/* 🎥 VIDEO DE FONDO */}
@@ -36,30 +32,28 @@ export default function Hero({
         playsInline
         poster={posterImage}
       >
-        {/* 
-          👉 AQUÍ VA LA RUTA DEL VIDEO
-          - LOCAL: /videos/hero.mp4
-          - EXTERNO: https://res.cloudinary.com/.../video.mp4
-        */}
         <source src={videoSrc} type="video/mp4" />
       </video>
 
-      {/* 🔳 CAPA OSCURA PARA MEJORAR CONTRASTE */}
-      <div className="absolute inset-0 bg-black/50"></div>
+      {/* 🔳 CAPA OSCURA */}
+      <div className="absolute inset-0 bg-black/40"></div>
 
-      {/* ✨ CONTENIDO DEL HERO */}
-      <div className="relative z-10 text-center text-white px-6 max-w-3xl">
-        <h1 className="text-6xl font-bold mb-4 tracking-wide">
-          {title}
+      {/* ✨ CONTENIDO ABAJO */}
+      <div className="relative z-10 text-center text-white px-6 pb-16 max-w-3xl">
+        <h1 className="text-5xl md:text-6xl font-bold mb-4 tracking-wide drop-shadow-lg">
+          {t("title")}
         </h1>
 
-        <p className="text-xl mb-8 opacity-90">
-          {subtitle}
+        <p className="text-lg md:text-2xl mb-6 opacity-90 drop-shadow-md">
+          {t("subtitle")}
         </p>
 
-        <button className="px-8 py-3 bg-white text-black font-semibold rounded-md hover:bg-gray-200 transition">
-          {buttonText}
-        </button>
+        {/* 🔘 BOTÓN CORREGIDO */}
+        <Link href={`/locale/${locale}/cotizar`}>
+          <button className="px-8 py-3 bg-white text-black font-semibold rounded-md hover:bg-gray-200 transition shadow-lg cursor-pointer">
+            {t("button")}
+          </button>
+        </Link>
       </div>
     </section>
   );

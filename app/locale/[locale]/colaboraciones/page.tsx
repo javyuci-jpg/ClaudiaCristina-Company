@@ -44,9 +44,7 @@ export default function colaboraciones() {
       
             {/* CTA */}
             <CallToAction />
-      
-            {/* FOOTER */}
-            <Footer />
+    
       
             {/* CHAT */}
             <FloatingChat />

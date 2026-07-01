@@ -20,14 +20,16 @@ export default function LocaleLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
+  const { locale } = params;
+
   return (
-    <html lang={params.locale}>
+    <html lang={locale}>
       <body className="bg-[#F7F3EE]">
         {/* Sincroniza idioma en cliente */}
-        <LanguageProvider locale={params.locale} />
+        <LanguageProvider locale={locale} />
 
         {/* Header único para todo el idioma */}
-        <Header locale={params.locale} />
+        <Header locale={locale} />
 
         {/* Providers envuelven el contenido para contextos globales */}
         <Providers>{children}</Providers>

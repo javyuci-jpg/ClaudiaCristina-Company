@@ -7,13 +7,40 @@
   "next": "Siguiente",
 
   "items": [
-    { "icon": "💃", "title": "Entretenimiento", "description": "Bailarines profesionales interpretando espectáculos coreografiados en una variedad de estilos, adaptados a tu evento." },
-    { "icon": "🎤", "title": "Hosting", "description": "Hosting profesional y carismático que garantiza el flujo perfecto de tu evento." },
-    { "icon": "🎉", "title": "Animación", "description": "Experiencias interactivas diseñadas para involucrar y entretener a tus invitados." },
-    { "icon": "📝", "title": "Coaching de Coreografía", "description": "Coreografías personalizadas adaptadas a tu visión y ocasión especial." },
-    { "icon": "👯", "title": "Clases de Baile", "description": "Experiencias de baile inspiradoras para todas las edades y niveles." },
-    { "icon": "📸", "title": "360 Video Booth", "description": "Una forma moderna e inmersiva de capturar cada celebración." }
+    
+    {
+      "image": "/imagenes/servicios/entertainment.jpg",
+      "title": "Entretenimiento",
+      "description": "Bailarines profesionales interpretando espectáculos coreografiados en una variedad de estilos, adaptados a tu evento."
+    },
+    {
+      "image": "/imagenes/servicios/hosting.jpg",
+      "title": "Hosting",
+      "description": "Hosting profesional y carismático que garantiza el flujo perfecto de tu evento."
+    },
+    {
+      "image": "/imagenes/servicios/animacion.png",
+      "title": "Animación",
+      "description": "Experiencias interactivas diseñadas para involucrar y entretener a tus invitados."
+    },
+    {
+      "image": "/imagenes/servicios/choreography-coaching.jpg",
+      "title": "Coaching de Coreografía",
+      "description": "Coreografías personalizadas adaptadas a tu visión y ocasión especial."
+    },
+    {
+      "image": "/imagenes/servicios/dance-classes.png",
+      "title": "Clases de Baile",
+      "description": "Experiencias de baile inspiradoras para todas las edades y niveles."
+    },
+    {
+      "image": "/imagenes/servicios/360.png",
+      "title": "Cabina de Video 360",
+      "description": "Una forma moderna e inmersiva de capturar cada celebración."
+    }
   ],
+  
+  "packagesButton": "Nuestros Paquetes",
 
   "packagesTitle": "Paquetes",
   "packages": [
@@ -62,6 +89,7 @@
       "image": "/images/paquetes/personalizado.jpg"
     }
   ]
+    
 }
 
 

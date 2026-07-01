@@ -1,4 +1,10 @@
 {
+  "hero": {
+    "title": "Arte en Movimiento",
+    "subtitle": "Danza · Performance · Expresión contemporánea",
+    "button": "Ver portafolio"
+  },
+
   "heroSectionLabel": "Sección principal de bienvenida",
   "aboutSectionTitle": "Sobre nosotros",
   "servicesSectionTitle": "Nuestros servicios",

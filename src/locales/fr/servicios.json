@@ -8,36 +8,38 @@
 
   "items": [
     {
-      "icon": "💃",
+      "image": "/imagenes/servicios/entertainment.jpg",
       "title": "Divertissement",
       "description": "Danseurs professionnels interprétant des spectacles chorégraphiés dans une variété de styles, adaptés à votre événement."
     },
     {
-      "icon": "🎤",
+      "image": "/imagenes/servicios/hosting.jpg",
       "title": "Animation de l'événement",
-      "description": "Animation professionnelle et charismatique qui garantit le déroulement parfait de votre événement."
+      "description": "Une animation professionnelle et charismatique qui garantit le déroulement parfait de votre événement."
     },
     {
-      "icon": "🎉",
+      "image": "/imagenes/servicios/animacion.png",
       "title": "Animation",
       "description": "Expériences interactives conçues pour impliquer et divertir vos invités."
     },
     {
-      "icon": "📝",
-      "title": "Coaching de Chorégraphie",
+      "image": "/imagenes/servicios/choreography-coaching.jpg",
+      "title": "Coaching Chorégraphique",
       "description": "Chorégraphies personnalisées adaptées à votre vision et à votre occasion spéciale."
     },
     {
-      "icon": "👯",
+      "image": "/imagenes/servicios/dance-classes.png",
       "title": "Cours de Danse",
       "description": "Expériences de danse inspirantes pour tous les âges et niveaux."
     },
     {
-      "icon": "📸",
+      "image": "/imagenes/servicios/360.png",
       "title": "Cabine Vidéo 360",
       "description": "Une manière moderne et immersive de capturer chaque célébration."
     }
   ],
+
+  "packagesButton": "Nos Forfaits",
 
   "packagesTitle": "Forfaits",
   "packages": [
@@ -46,18 +48,18 @@
       "description": "Une combinaison de services pour un mariage inoubliable.",
       "includes": [
         "Danseuse Cygne Blanc / Ailes",
-        "Animation Heure Folle et Interaction avec les Invités",
+        "Animation Hora Loca et Interaction avec les Invités",
         "Expérience Cabine Vidéo 360",
         "Coaching pour la Chorégraphie de la Première Danse"
       ],
-      "perfectFor": "Couples recherchant un divertissement élégant et des expériences mémorables.",
+      "perfectFor": "Couples recherchant un divertissement élégant et mémorable.",
       "image": "/images/paquetes/bodas.jpg"
     },
     {
       "title": "Expérience Prestige Corporative",
       "description": "Forfait conçu pour des événements corporatifs de haut niveau.",
       "includes": [
-        "Woman Red Carpet",
+        "Femme Tapis Rouge",
         "Spectacle de Danse Professionnel",
         "Expérience Cabine Vidéo 360"
       ],
@@ -65,8 +67,8 @@
       "image": "/images/paquetes/corporativo.jpg"
     },
     {
-      "title": "Expérience Little Stars Party",
-      "description": "Amusement pour les enfants avec danse et créativité.",
+      "title": "Expérience Fête des Petites Étoiles",
+      "description": "Amusement pour les plus jeunes avec danse et créativité.",
       "includes": [
         "Spectacle de Danse Interactif",
         "Mini Cours de Danse et Chorégraphie Amusante",

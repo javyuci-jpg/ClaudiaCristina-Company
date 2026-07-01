@@ -1,0 +1,28 @@
+{
+  "heroTitle": "Frequently Asked Questions",
+  "heroSubtitle": "We answer your most common doubts",
+  "heroAlt": "Background image for Frequently Asked Questions",
+  "title": "Frequently Asked Questions",
+  "questions": [
+    {
+      "question": "Can the services be customized?",
+      "answer": "Yes. Every event is unique, and all our services can be tailored to your vision, theme, and desired experience."
+    },
+    {
+      "question": "Can I combine multiple services?",
+      "answer": "Absolutely. We invite you to explore our Packages section to see examples of how different services can be combined to create a personalized experience."
+    },
+    {
+      "question": "What types of dance shows do you offer?",
+      "answer": "We offer a variety of styles, including ballet, contemporary, salsa, tango, themed shows, and custom choreographies for your event."
+    },
+    {
+      "question": "Do you travel outside Montreal?",
+      "answer": "Yes. We are available for events across Quebec, Ontario, and other destinations upon request."
+    },
+    {
+      "question": "How can I request a quote?",
+      "answer": "Simply fill out our contact form or write to us directly via WhatsApp. We’ll be happy to discuss your event and prepare a personalized proposal."
+    }
+  ]
+}

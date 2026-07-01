@@ -1,8 +1,15 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import Link from "next/link";
 
-export default function About() {
+interface AboutProps {
+  locale: string; // 👈 añadimos locale como prop
+}
+
+export default function About({ locale }: AboutProps) {
   const [visible, setVisible] = useState(false);
+  const { t } = useTranslation("about"); // namespace "about"
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,53 +29,38 @@ export default function About() {
   }, []);
 
   return (
-    <section
-      id="about-section"
-      className="w-full py-12 px-6 bg-[#E8E1D9]"
-    >
+    <section id="about-section" className="w-full py-12 px-6 bg-[#E8E1D9]">
       <div
         className={`max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center transition-all duration-700 ${
           visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
         }`}
       >
-        {/* Imagen optimizada para móvil */}
+        {/* Imagen */}
         <div className="w-full flex justify-center">
           <img
             src="/claudia.jpeg"
             alt="Claudia"
-            className="
-              w-40 sm:w-48 md:w-72
-              rounded-lg 
-              shadow-[0_4px_12px_rgba(0,0,0,0.12)] 
-              border border-[#d6cfc7]
-              object-cover
-              transition-transform duration-500 ease-out
-              hover:scale-105
-            "
+            className="w-40 sm:w-48 md:w-72 rounded-lg shadow-[0_4px_12px_rgba(0,0,0,0.12)] border border-[#d6cfc7] object-cover transition-transform duration-500 ease-out hover:scale-105"
           />
         </div>
 
         {/* Texto */}
         <div className="text-center md:text-left">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 md:mb-8">
-            Sobre Claudia
+            {t("title")}
           </h2>
 
-          <p className="text-base sm:text-lg text-gray-700 leading-relaxed \
-          mb-4 md:mb-6">
-            Claudia es una artista multidisciplinaria especializada en danza contemporánea y performance.
-            Su trabajo combina técnica, emoción y narrativa visual para crear experiencias que conectan profundamente con el público.
-          </p>
-
           <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-6 md:mb-8">
-            Con una trayectoria en escenarios, producciones audiovisuales y colaboraciones creativas,
-            Claudia aporta una presencia escénica única y un estilo propio que transforma cada proyecto.
+            {t("paragraph")}
           </p>
 
           <div className="flex justify-center md:justify-start">
-            <button className="px-8 py-3 bg-[#A4161A] text-white font-semibold rounded-md hover:bg-[#7f1013] transition">
-              Contactar
-            </button>
+            {/* 🔘 BOTÓN CORREGIDO */}
+            <Link href={`/locale/${locale}/biografia`}>
+              <button className="px-6 py-2 bg-[#A4161A] text-white font-semibold rounded-md hover:bg-[#7f1013] transition cursor-pointer">
+                {t("button")}
+              </button>
+            </Link>
           </div>
         </div>
       </div>
