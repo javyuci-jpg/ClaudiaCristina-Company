@@ -36,9 +36,9 @@ import enFooter from "../src/locales/en/footer.json";
 import esFooter from "../src/locales/es/footer.json";
 import frFooter from "../src/locales/fr/footer.json";
 
-import enCallToAction from "../src/locales/en/CallToAction.json";
-import esCallToAction from "../src/locales/es/CallToAction.json";
-import frCallToAction from "../src/locales/fr/CallToAction.json";
+import enCallToAction from "../src/locales/en/callToAction.json";
+import esCallToAction from "../src/locales/es/callToAction.json";
+import frCallToAction from "../src/locales/fr/callToAction.json";
 
 import enAbout from "../src/locales/en/about.json";
 import esAbout from "../src/locales/es/about.json";
