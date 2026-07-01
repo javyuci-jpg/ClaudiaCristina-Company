@@ -40,9 +40,9 @@ import enCallToAction from "../src/locales/en/CallToAction.json";
 import esCallToAction from "../src/locales/es/CallToAction.json";
 import frCallToAction from "../src/locales/fr/CallToAction.json";
 
-import enAbout from "../src/locales/en/About.json";
-import esAbout from "../src/locales/es/About.json";
-import frAbout from "../src/locales/fr/About.json";
+import enAbout from "../src/locales/en/about.json";
+import esAbout from "../src/locales/es/about.json";
+import frAbout from "../src/locales/fr/about.json";
 
 import enFaq from "../src/locales/en/faq.json";
 import esFaq from "../src/locales/es/faq.json";
